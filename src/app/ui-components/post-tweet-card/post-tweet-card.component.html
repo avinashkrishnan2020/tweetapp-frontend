@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar class="avatar-image"></div>
+
+        <mat-card-title>{{firstName}} {{lastName}}</mat-card-title>
+
+        <mat-card-subtitle>
+
+        </mat-card-subtitle>
+
+    </mat-card-header>
+
+    <form #postTweetForm="ngForm" (ngSubmit)="postTweet()">
+        <div class="form-group">
+            <label for="postTweetBox"></label>
+            <textarea [(ngModel)]="tweet.tweetText" name="newTweet" class="form-control" id="postTweetBox" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-info">Post</button>
+    </form>
+
+
+
+</mat-card>
